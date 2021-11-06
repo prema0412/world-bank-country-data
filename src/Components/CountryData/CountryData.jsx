@@ -9,6 +9,9 @@ const CountryData = (props) => {
 
 
     return (
+
+        <div className="container">
+
         <div className="countryData">
             <h2>Country : {name}</h2>
             <p>Iso Code : {iso2Code}</p>
@@ -19,6 +22,10 @@ const CountryData = (props) => {
             <p>Longitude : {longitude}</p>
             <p>Latitude : {latitude}</p>
         </div>
+
+        </div>
+
+        
     )
 }
 

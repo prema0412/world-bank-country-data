@@ -4,6 +4,8 @@ import React, { useState, useEffect } from 'react'
 import SearchBox from './Components/SearchBox/SearchBox';
 import CountryData from './Components/CountryData/CountryData';
 
+import './App.scss'
+
 const App = () => {
 
   const [searchTerm, setSearchTerm] = useState(null);
@@ -27,13 +29,14 @@ const App = () => {
 
   return (
     <>
-    <SearchBox label="Enter Country" searchTerm={searchTerm} handleInput={handleInput}/>
+    <SearchBox label="Quick Country Search" searchTerm={searchTerm} placeHolder="iso2Code" handleInput={handleInput}/>
+    <div className="main-container">
     { countryData && countryData.map(country => <CountryData name={country.name} iso2Code={country.iso2Code} 
     region={country.region.value} incomeLevel={country.incomeLevel.value} lendingType={country.lendingType.value}
     capitalCity={country.capitalCity} longitude={country.longitude} latitude={country.latitude}
 
     /> )} 
-
+    </div>
     </>
   )
 }
