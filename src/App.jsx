@@ -19,7 +19,7 @@ const App = () => {
  })
 
   useEffect ( () => {
-    fetch(`http://api.worldbank.org/v2/country/${searchTerm}?format=json`)
+    fetch(`https://api.worldbank.org/v2/country/${searchTerm}?format=json`)
     .then ( res => res.json() )
     .then ( data => setCountryData(data[1]) )
     .catch ( err => console.log(err) )
